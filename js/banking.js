@@ -31,13 +31,17 @@ document.getElementById('deposite-button').addEventListener('click', function(){
     
 })
 
-// withdraw balance
 
+
+//  function bank
 document.getElementById('withdraw-button').addEventListener('click', function(){
-    const withdrawInput = document.getElementById('withdraw-input');
-    const withdrawAmonutText = withdrawInput.value;
-    const withdrawAmount= parseFloat(withdrawAmonutText);
-    
+
+    // const withdrawInput = document.getElementById('withdraw-input');
+    // const withdrawAmonutText = withdrawInput.value;
+    // const withdrawAmount= parseFloat(withdrawAmonutText);
+    const withdrawAmount = getInputValue('withdraw-input');
+
+
     const withdrawTotal = document.getElementById('withdraw-total');
     const previouswithdrawText = withdrawTotal.innerText;
     const previouswithdrawAmount = parseFloat(previouswithdrawText)
@@ -51,6 +55,5 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const newbalanceTotal = previousabalanceTotal - withdrawAmount ;
     balanceTotal.innerText = newbalanceTotal;
 
-    // clrar withdraw input
-    withdrawInput.value = '';
+   
 })
