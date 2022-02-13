@@ -1,9 +1,9 @@
 function getInputValue(inputId){
-    const depositeInput = document.getElementById(inputId);
-    const depositeAmountText = depositeInput.value;
-    const depositeAmount = parseFloat(depositeAmountText);
-    depositeInput.value = '';
-    return depositeAmount;
+    const input = document.getElementById(inputId);
+    const inputAmountText = input.value;
+    const Amount = parseFloat(inputAmountText);
+    input.value = '';
+    return Amount;
 
 }
 
