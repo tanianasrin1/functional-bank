@@ -1,5 +1,5 @@
-function getInputValue(){
-    const depositeInput = document.getElementById('deposite-input');
+function getInputValue(inputId){
+    const depositeInput = document.getElementById(inputId);
     const depositeAmountText = depositeInput.value;
     const depositeAmount = parseFloat(depositeAmountText);
     depositeInput.value = '';
@@ -13,7 +13,7 @@ document.getElementById('deposite-button').addEventListener('click', function(){
     // const depositeInput = document.getElementById('deposite-input');
     // const depositeAmountText = depositeInput.value;
     // const depositeAmount = parseFloat(depositeAmountText);
-    const depositeAmount = getInputValue();
+    const depositeAmount = getInputValue('deposite-input');
 
     const depositeTotal = document.getElementById('deposite-total');
      const previousdepositeText = depositeTotal.innerText;
@@ -37,6 +37,7 @@ document.getElementById('withdraw-button').addEventListener('click', function(){
     const withdrawInput = document.getElementById('withdraw-input');
     const withdrawAmonutText = withdrawInput.value;
     const withdrawAmount= parseFloat(withdrawAmonutText);
+    
     const withdrawTotal = document.getElementById('withdraw-total');
     const previouswithdrawText = withdrawTotal.innerText;
     const previouswithdrawAmount = parseFloat(previouswithdrawText)
